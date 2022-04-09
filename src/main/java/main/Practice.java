@@ -197,8 +197,24 @@ public class Practice {
      * @param heights a kadétok magassága
      */
     public static boolean isInAscendingOrder(int[] heights) {
-        return false;
+        boolean sorted = true;
+        for (int i = 0; i < heights.length - 1; i++) {
+            for (int j = 0; j < heights.length - 1 - i; j++) {
+                if (heights[j] > heights[j + 1]) {
+                    int swap = heights[j];
+                    heights[j] = heights[j + 1];
+                    heights[j + 1] = swap;
+                    sorted = false;
+                }
+            }
+
+        }
+        return sorted;
+
     }
+
+
+
 
     /**
      * 8. feladat - 4p
