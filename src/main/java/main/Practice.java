@@ -91,6 +91,9 @@ public class Practice {
      * @return a hajó harcképes-e
      */
     public static boolean isShipAbleToFight(int shieldCharge, int weaponCharge) {
+        if (shieldCharge > 20 && weaponCharge > 20 && (double)(shieldCharge + weaponCharge) / 2 > 50) {
+            return true;
+        }
         return false;
     }
 
