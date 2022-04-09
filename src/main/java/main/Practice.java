@@ -126,7 +126,13 @@ public class Practice {
      * @return a megrendelés teljesítéséhez szükséges napok száma
      */
     public static int getSpaceRabbitDays(int startRabbitValue, int requiredRabbits) {
-        return -1;
+        int days = 1;
+        int sum = 0;
+        for (int i = startRabbitValue; i < requiredRabbits; i++){
+            sum =  startRabbitValue * 2;
+            days++;
+        }
+        return days;
     }
 
     /**
@@ -145,7 +151,11 @@ public class Practice {
      * @return a teljes sereg száma
      */
     public static int sumArmy(int[] armyOfPlanets) {
-        return -1;
+        int sum = 0;
+        for (int i = 0; i < armyOfPlanets.length; i++) {
+            sum += armyOfPlanets[i];
+        }
+        return sum;
     }
 
     /**
