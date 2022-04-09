@@ -270,6 +270,11 @@ public class Practice {
      * @return a legtöbb veszteséget tartalmazó hónap index-száma
      */
     public static int getWorstMonthIndex(int[][] lossesPerMonths) {
+
+
+
+
+
         return -1;
     }
 
@@ -297,6 +302,20 @@ public class Practice {
      * @param shipPowers az űrhajók ereje
      */
     public static void sortShipsByPower(String[] shipNames, int[] shipPowers) {
+        for ( int i = 0; i < shipPowers.length - 1; i++){
+            for ( int j = 0; j < shipPowers.length -1 - i; j++){
+                if ( shipPowers[j] < shipPowers[j+1]){
+                    int swap = shipPowers[j];
+                    shipPowers[j] = shipPowers[j+1];
+                    shipPowers[j+1] = swap;
+
+                    String swapNames = shipNames[j];
+                    shipNames[j] = shipNames[j+1];
+                    shipNames[j+1] = swapNames;
+
+                }
+            }
+        }
 
     }
 
